@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
-import MovieCard from './components/MovieCard'
 import SearchBar from './components/SearchBar'
+import MovieList from './components/MovieList'
 
 import searchMovies from './services/getSearchMovies'
 
@@ -36,20 +36,7 @@ const App = () => {
             </div>
           )
           : (
-            movies?.length > 0
-            ? (
-              movies.map(data => (
-                <MovieCard
-                  key={data.imdbid}
-                  movie={data}
-                />
-              ))
-            )
-            : (
-              <div className="empty">
-                <h2>No movies found</h2>
-              </div>
-            )
+            <MovieList movies={movies} />
           )
         }
       </div>
