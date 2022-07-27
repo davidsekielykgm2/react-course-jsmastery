@@ -1,4 +1,7 @@
+import MovieCard from './components/MovieCard'
 import SearchIcon from './img/icons/search.svg'
+
+import dataExample from './data/example.json'
 
 const App = () => {
   return (
@@ -11,18 +14,11 @@ const App = () => {
       </div>
 
       <div className="container">
-        <div className="movie">
-          <div>
-            <p>Year</p>
-          </div>
-          <div>
-            <img src="https://via.placeholder.com/400" alt="Img Movie" />
-          </div>
-          <div>
-            <span>Tipo</span>
-            <h3>Title</h3>
-          </div>
-        </div>
+        {
+          dataExample.results.map(data => (
+            <MovieCard movie={data}/>
+          ))
+        }
       </div>
 
     </div>

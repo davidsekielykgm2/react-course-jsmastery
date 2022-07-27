@@ -1,0 +1,45 @@
+{
+  "results": [
+    {
+      "genre": [
+        "Documentary"
+      ],
+      "imageurl": [
+        "https://m.media-amazon.com/images/M/MV5BMTA4M2NjMGUtNzJlOS00NTUzLTkyOTYtZTY2ZGM3M2Q4M2E0XkEyXkFqcGdeQXVyNzU4NzkzNzE@._V1_UX182_CR0,0,182,268_AL_.jpg"
+      ],
+      "imdbid":"tt12292428",
+      "released":2020,
+      "synopsis":"What will the future be like in the year 2050? Endgame 2050 is a feature-length documentary that gives us a glimpse into that future, and it does not look good. Featuring musician Moby ...",
+      "title":"Endgame 2050",
+      "type":"movie"
+    },
+    {
+      "genre": [
+        "Action",
+        "Adventure",
+        "Drama"
+      ],
+      "imageurl": [
+        "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_UX182_CR0,0,182,268_AL_.jpg"
+      ],
+      "imdbid":"tt4154796",
+      "released":2019,
+      "synopsis":"After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.",
+      "title":"Avengers: Endgame",
+      "type":"movie"
+    },
+    {
+      "genre": [
+        "Documentary"
+      ],
+      "imageurl": [
+        "https://m.media-amazon.com/images/M/MV5BNmQwYjBhOWEtZTg3Zi00OGJlLWJiMjYtNzFjNTk4NTZkY2UyXkEyXkFqcGdeQXVyMTUyMDA5MDY@._V1_UY268_CR4,0,182,268_AL_.jpg"
+      ],
+      "imdbid":"tt8655550",
+      "released":2018,
+      "synopsis":"",
+      "title":"Endgame - assisted suicide and legislation",
+      "type":"movie"
+    }
+  ]
+}
