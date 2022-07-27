@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react'
 
 import MovieCard from './components/MovieCard'
-import SearchIcon from './img/icons/search.svg'
+import SearchBar from './components/SearchBar'
 
 import searchMovies from './services/getSearchMovies'
 
 const App = () => {
   const [movies, setMovies] = useState([])
-  const [searchTerm, setSearchTerm] = useState('')
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
@@ -26,18 +25,7 @@ const App = () => {
     <div className="app">
       <h1>MovieLand</h1>
 
-      <div className="search">
-        <input
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          placeholder="Search for movies"
-        />
-        <img
-          src={SearchIcon}
-          alt="search"
-          onClick={() => handleSetMovies({ title:searchTerm })}
-        />
-      </div>
+      <SearchBar setMovies={handleSetMovies} />
 
       <div className="container">
         {
