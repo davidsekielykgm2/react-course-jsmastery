@@ -5,8 +5,13 @@ import SearchIcon from '../img/icons/search.svg'
 const SearchBar = ({ setMovies }) => {
   const [searchTerm, setSearchTerm] = useState('')
 
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    setMovies({ title:searchTerm })
+  }
+
   return (
-    <div className="search">
+    <form onSubmit={handleSubmit} className="search">
       <input
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
@@ -15,9 +20,9 @@ const SearchBar = ({ setMovies }) => {
       <img
         src={SearchIcon}
         alt="search"
-        onClick={() => setMovies({ title:searchTerm })}
+        onClick={handleSubmit}
       />
-    </div>
+    </form>
   )
 }
 
