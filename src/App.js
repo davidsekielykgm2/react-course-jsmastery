@@ -1,9 +1,19 @@
+import { useState, useEffect } from 'react'
+
 import MovieCard from './components/MovieCard'
 import SearchIcon from './img/icons/search.svg'
 
-import dataExample from './data/example.json'
+import searchMovies from './services/getSearchMovies'
 
 const App = () => {
+  const [movies, setMovies] = useState([])
+
+  useEffect(() => {
+    searchMovies().then(data => {
+      setMovies([...data.results])
+    })
+  }, [])
+
   return (
     <div className="app">
       <h1>MovieLand</h1>
@@ -15,9 +25,20 @@ const App = () => {
 
       <div className="container">
         {
-          dataExample.results.map(data => (
-            <MovieCard movie={data}/>
-          ))
+          movies?.length > 0
+          ? (
+            movies.map(data => (
+              <MovieCard
+                key={data.imdbid}
+                movie={data}
+              />
+            ))
+          )
+          : (
+            <div className="empty">
+              <h2>No movies found</h2>
+            </div>
+          )
         }
       </div>
 
