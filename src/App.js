@@ -16,7 +16,7 @@ const App = () => {
   const handleSetMovies = ({ title = 'Endgame' } = {}) => {
     setLoading(true)
     searchMovies({ title }).then(data => {
-      setMovies([...data.results])
+      setMovies(data)
       setLoading(false)
     })
   }

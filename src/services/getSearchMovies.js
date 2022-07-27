@@ -10,10 +10,11 @@ const options = {
 }
 
 const searchMovies = async ({ title = 'Endgame', page = 1 } = {}) => {
+  console.log(options)
   const url = `${API_URL}/search?title=${title}&page=${page}`
   const response = await fetch(url, options)
   const json = await response.json()
-  return json
+  return json.results
 }
 
 export default searchMovies
