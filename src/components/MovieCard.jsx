@@ -1,13 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const MovieCard = ({ movie: { released, imageurl, type, title } }) => {
-  const imgProp = imageurl ? imageurl : []
-  const srcImg = imgProp.length ? imgProp[0] : 'https://via.placeholder.com/400'
+const MovieCard = ({ movie: { year, image, genres, title, _id } }) => {
+  const srcImg = image ? image : 'https://via.placeholder.com/400'
+  const type = genres.length ? genres[0].name : ''
 
   return (
-    <div className="movie">
+    <Link to={`/movie/${_id}`} className="movie">
       <div>
-        <p>{ released }</p>
+        <p>{ year }</p>
       </div>
       <div>
         <img src={ srcImg } alt={ title } />
@@ -16,7 +17,7 @@ const MovieCard = ({ movie: { released, imageurl, type, title } }) => {
         <span>{ type }</span>
         <h3>{ title }</h3>
       </div>
-    </div>
+    </Link>
   )
 }
 

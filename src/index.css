@@ -192,6 +192,12 @@ h1 {
   opacity: 1;
 }
 
+.movie-page h2 {
+  font-size: 2rem;
+  color: #f9d3b4;
+  font-family: var(--font-raleway);
+}
+
 @media screen and (max-width: 600px) {
   .app {
     padding: 4rem 2rem;
